@@ -1,0 +1,23 @@
+Steps:
+
+1. Set intial time, altitude, and dt, and velocity
+Create an expansion ratio array
+ 
+    In overall for loop (for one expansion ratio, loop simulates)
+    2. Update time step t=t +dt
+    3. Calculate mass of propellant burned
+    4. Get instantaneous rocket mass
+    5. Solve for air density based off previous altitude (yi-1)
+    6. Set up Thrust force function
+    7. Set up drag force function
+    8. Combine terms for Fnet = Ft-Fd-Winst
+    9. Get instantaneous acceleration --> Fnet/instantaneous mass
+    10. Get velocity: Vnew = Vold + Ainst*dt
+    11. Get altitude: Ynew = Yold + Vnew*dt
+    12. Store velocity and postion data
+    13. Repeat Loop
+
+Loop will iterate once again for new expansion ratio
+
+
+Check shock locations and ensure shock expansion ratio is greater than actual nozzle expansion ratio (Design for second critical)
